@@ -69,7 +69,7 @@ const ContactPage = () => {
       </form>
 
       <div className="form-image">
-        <img src="./assets/images/blog-1.jpg" width="60%" alt="Support Image" />
+        <img src="./assets/images/blog-1.jpg" width="60%" alt="Support" />
         
       </div>
     </div>
