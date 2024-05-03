@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -30,11 +32,12 @@ function Navbar() {
       
       />
         <a href="/" className="navybrand" onClick={() => handleNavigation("/")}>
+          
           NumericVeda
         </a>
         <ul className={active}>
           <li className="nav__item">
-            <a href="/src/components/Login" target="_blank" className="nav__link" onClick={() => handleNavigation("/")}>
+            <a href="/" target="_blank" className="nav__link" onClick={() => handleNavigation("/")}>
               Home
             </a>
           </li>
@@ -50,9 +53,9 @@ function Navbar() {
           </li>
           
           <li className="nav__item">
-            <a href="/src/components/contact" target="_blank" className="nav__link" onClick={() => handleNavigation("/contact")}>
+          <Link to="/contact">
               Contact
-            </a>
+              </Link>
           </li>
           <li className="nav__item">
             <a
