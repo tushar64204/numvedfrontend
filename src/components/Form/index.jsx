@@ -27,7 +27,7 @@ const Data = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://numericveda.onrender.com/api/data";
+			const url = "https://numericvedaserver.onrender.com/api/data";
 			const { data: res } = await axios.post(url, data);
 			navigate("/thankyou");
 			console.log(res.message);

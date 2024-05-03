@@ -123,11 +123,6 @@
     
     <title>Courses - NumericVeda Institute</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
     
         .menu-container {
             background-color: #7710ff;
@@ -216,7 +211,28 @@
         </div>
   
         <ul class="navbar-list">
-          <a href="/Login" target="_blank" class="btn">Book Your Class</a>
+          <style>
+            /* Define button-like styling */
+            .quiz-buttontime {
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #0b27c4; /* Pink background color */
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+            }
+            /* Media Query for mobile screens */
+@media (max-width: 768px) {
+  .quiz-buttontime {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+          </style>
+          <a href="#quiz" target="_blank" class="quiz-buttontime">Play quiz <div id="timer"><span id="time">30</span></div>
+            </a>
+
 
       
           <li class="dropdown"><a href="./aboutus.html" target="_blank" class="dropbtn">About</a></li>
@@ -245,57 +261,79 @@
       
       
       </nav>      
+
       <style>
-        .thumbcontainer {
-          position: relative;
-        }
+
+      /* Default styles for both mobile and desktop */
+.thumbcontainer {
+    position: relative;
+}
+
+.sliding-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden; /* Ensure the banners do not overflow */
+}
+
+.sliding-thumbnails {
+    position: absolute;
+    top: calc(100% + 20px); /* Position thumbnails below the slides */
+    left: 50%; /* Align thumbnails to the center horizontally */
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure thumbnails are above the banners */
+}
+
+.thumbnail {
+    display: inline-block;
+    width: 100px; /* Adjust thumbnail size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Adjust spacing */
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%; /* Make sure thumbnails fill their container */
+    height: auto;
+    border: 4px solid transparent; /* Add border for visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.thumbnail.active img {
+    border-color: black; /* Change border color for active thumbnail */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Increase shadow for active thumbnail */
+}
+
+.slidingSlides {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    height: auto;
+}
+
+.slidingSlides.active {
+    display: block; /* Show active slide */
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 70px; /* Adjust thumbnail size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin: 5px; /* Adjust thumbnail margin for smaller screens */
+    }
     
-        .sliding-container {
-          position: relative;
-          max-width: 100%;
-          overflow: hidden; /* Ensure the banners do not overflow */
-        }
+    .sliding-thumbnails {
+        top: calc(100% + 10px); /* Adjust position of thumbnails for smaller screens */
+        width: 100%; /* Ensure thumbnails stretch across the container */
+        display: flex;
+        justify-content: center; /* Center thumbnails horizontally */
+    }
+    .sliding-container {
+        width: 100%; /* Ensure sliding container stretches across the container */
+    }
+}
+
+</style>
     
-        .sliding-thumbnails {
-          position: absolute;
-          top: calc(100% + 20px); /* Position thumbnails below the slides */
-          left: 50%; /* Align thumbnails to the center horizontally */
-          transform: translateX(-50%);
-          z-index: 10; /* Ensure thumbnails are above the banners */
-        }
-    
-        .thumbnail {
-          display: inline-block;
-          width: 100px; /* Adjust thumbnail size */
-          height: auto; /* Maintain aspect ratio */
-          margin: 10px; /* Adjust spacing */
-          cursor: pointer;
-        }
-    
-        .thumbnail img {
-          width: 100%; /* Make sure thumbnails fill their container */
-          height: auto;
-          border: 4px solid transparent; /* Add border for visibility */
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-        }
-    
-        .thumbnail.active img {
-          border-color: black; /* Change border color for active thumbnail */
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Increase shadow for active thumbnail */
-        }
-    
-        .slidingSlides {
-          display: none; /* Hide all slides by default */
-          width: 100%;
-          height: auto;
-        }
-    
-        .slidingSlides.active {
-          display: block; /* Show active slide */
-        }
-    
-      </style>
-   
     <div class="thumbcontainer">
       <div class="sliding-container">
         <img class="slidingSlides active" src="./readme-images/banner4.png">
@@ -428,16 +466,33 @@
 
   <style>
     /* Add CSS styling here */
-    #date-time {
-      font-size: 24px;
-      color: #333;
-    }
-    #course-info {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #ffffff;
-      background-color: #020c9cbb;
-    }
+   /* Default styles for both mobile and desktop */
+#date-time {
+  font-size: 24px;
+  color: #333;
+  text-align: center; /* Center the text */
+}
+
+#course-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #020c9cbb;
+  text-align: center; /* Center the text */
+}
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media only screen and (max-width: 767px) {
+  #date-time {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+  
+  #course-info {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
 
     .Floatingcontainer {
       position: relative;
@@ -471,7 +526,7 @@
     <!-- Floating animation element -->
     <img src="./readme-images/demopng.png" width="60%" alt="Floating Animation">
   </div>
-  <div id="course-info">Course bookings are open!</div>
+  <div id="course-info">Course bookings are open! Login to Book your Free Class.</div>
 </div>
 
 <script>
@@ -550,7 +605,6 @@
 
                
   <!-- what we are -->
-
   <style>
     /* CSS styles */
     .unique-vedic-maths-section {
@@ -683,24 +737,79 @@
         margin-top: 42%;
     }
     /* CSS for university logos */
-.university-logos {
-    display: flex; /* Display images in a row */
-    justify-content: center; /* Center-align the images */
-    align-items: center; /* Vertically center-align the images */
-}
+    .university-logos {
+        display: flex; /* Display images in a row */
+        justify-content: center; /* Center-align the images */
+        align-items: center; /* Vertically center-align the images */
+    }
 
-.university-logo {
-    width: 150px; /* Set the width of the logo images */
-    height: auto; /* Automatically adjust height while maintaining aspect ratio */
-    margin: 10px; /* Add margin around the images */
-    transition: transform 0.2s; /* Add transition effect for smooth uplift */
-}
+    .university-logo {
+        width: 150px; /* Set the width of the logo images */
+        height: auto; /* Automatically adjust height while maintaining aspect ratio */
+        margin: 10px; /* Add margin around the images */
+        transition: transform 0.2s; /* Add transition effect for smooth uplift */
+    }
 
-.university-logo:hover {
-    transform: scale(1.2); /* Scale up the image slightly when hovered */
-}
+    .university-logo:hover {
+        transform: scale(1.2); /* Scale up the image slightly when hovered */
+    }
 
-      </style>
+    /* CSS styles */
+
+    /* For mobile screens */
+   /* For mobile screens */
+@media only screen and (max-width: 768px) {
+    .unique-container {
+        flex-direction: column; /* Change flex direction to column for stacking content */
+    }
+
+    .unique-content,
+    .unique-additional-info {
+        width: 100%; /* Make both content and additional info take full width */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 5%; /* Adjust top margin */
+        text-align: center; /* Center-align text */
+    }
+
+    .unique-additional-info {
+        margin-top: 0; /* Reset top margin */
+    }
+
+    .unique-image-container {
+        position: relative; /* Set position to relative */
+        width: 100%; /* Set width to 100% */
+        max-width: 300px; /* Set max width for better readability */
+        margin: 0 auto 20px; /* Center-align and add space below */
+        padding: 0 20px; /* Add padding for better spacing */
+    }
+
+    .unique-image-container img {
+        max-width: 100%; /* Make images take full width */
+        display: block; /* Ensure images are block elements */
+        margin: 0 auto 20px; /* Center-align and add space below */
+        border-radius: 15px; /* Add border radius */
+    }
+
+    .university-logos {
+        flex-wrap: wrap; /* Allow logos to wrap onto the next line */
+        justify-content: center; /* Center-align logos */
+    }
+
+    .university-logo {
+        width: 45%; /* Set the width of the logo images */
+        margin: 10px; /* Add margin around the images */
+    }
+    .unique-image-container {
+        max-width: 100%; /* Ensure image takes full width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 15px;
+        position: static; /* Reset position */
+        display: block; /* Show the first image */
+    }
+    }
+
+
+</style>
        <div class="container">
  
       <h2 class="h2 section-title">
@@ -710,6 +819,7 @@
       <section class="unique-vedic-maths-section">
           <div class="unique-container">
               <div class="unique-content">
+                <br><br><br><hr>
                   <div class="unique-text">
                       <h2>Unlock the potential of Vedic Maths with us:</h2>
                       <ul>
@@ -721,6 +831,9 @@
                         <img src="./readme-images/vedicpng.png" width="40%" height="30%" alt="Top Right Image">
                        
                         <div class="unique-additional-info">
+                          <br> 
+                        <br>
+                          <hr>
                           <h2 class="h2 section-title">
                               Join our Vedic Maths <span class="span"> community  </span> for
                           </h2>
@@ -736,6 +849,8 @@
 
                       <p>
                           <h2 class="h2 section-title">
+                           <br><br>
+
                               <span class="span">Join our community  </span> and explore the wonders of Vedic Maths today!
                           </h2>
                       </p>
@@ -810,8 +925,10 @@
                       Unlock Success Online: Vedic Math Certification Course! Dive into General Aptitude and Math Excellence
                     </p>
     
-                    <span class="card-badge">8 hours</span>
-    
+                    <span class="card-badge">Instructor: Dr. Rakesh Bhatia</span>
+<span class="card-badge">Classes conducted on Zoom app</span>
+
+
                   </div>
                 </li>
     
@@ -831,8 +948,15 @@
                       Learn the fundamentals of Vedic Mathematics and improve your mental calculation skills.
                     </p>
     
-                    <span class="card-badge">Duration: 4 weeks</span>
-    
+                    <span class="card-badge">Instructor: Dr. Rakesh Bhatia</span>
+<span class="card-badge">Classes conducted on Zoom app</span>
+
+
+
+
+
+
+
                   </div>
                 </li>
     
@@ -852,7 +976,15 @@
                       Master advanced techniques for faster calculations, including multiplication, division, and square roots.
                     </p>
     
-                    <span class="card-badge">Duration: 12 weeks</span>
+                    <span class="card-badge">Instructor: Dr. Rakesh Bhatia</span>
+<span class="card-badge">Classes conducted on Zoom app</span>
+
+
+
+
+
+
+
     
                   </div>
                 </li>
@@ -873,7 +1005,15 @@
                       Elevate Your General Aptitude and Math Skills for Success in Competitive Government Exams.
                     </p>
     
-                    <span class="card-badge">4 weeks</span>
+                    <span class="card-badge">Instructor: Dr. Rakesh Bhatia</span>
+<span class="card-badge">Classes conducted on Zoom app</span>
+
+
+
+
+
+
+
     
                   </div> 
                 </li>
@@ -1111,148 +1251,95 @@
           </section>
 
           <!-- review-container -->
-    
-            <!-- <style>
-              .reviews-container {
-                width: 100%;
-              }
-              
-              .review-box {
-                display: inline-block;
-                width: 45%; /* Adjust the width of each box as needed */
-                margin: 10px;
-                vertical-align: top;
-              }
-              
-              .review {
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                background-color: #f8f8f8;
-                margin-bottom: 10px;
-                font-size: 14px;
-              }
-              
-              .rating {
-                text-align:justify;
-              }
-              
-           .stars {
-                color: gold;
-                  }
-            </style>
-        
-            <div class="reviews-container">
-              <div class="review-box">
-                <div class="review">Live Free Workshops - "I attended the live free workshops and they were incredibly informative. I learned so much in just a short amount of time. Highly recommend!" - Sarah</div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
+          <style>
+            .review-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              margin-top: 20px;
+            }
+            .review-slider {
+              display: flex;
+              width: 100%;
+              transition: transform 1s ease;
+            }
+            .review {
+              flex: 0 0 auto;
+              width: 100%;
+              padding: 20px;
+              box-sizing: border-box;
+              border: 10px solid #ccc;
+              border-radius: 15px;
+              background-color: rgb(255, 255, 255);
+            }
+          </style>
+          
+          
+          <h2><span>Top Reviews</span></h2>
+          <div class="review-container">
+            <div class="review-slider" id="top-review-slider">
+              <div class="review reviewdrum1">
+                <b><i>Rahul</i></b>
+                <p>"A single formula for all trigonometry formulae! Amazing! I never thought it could be this simple. Thank you for simplifying complex concepts."</p>
               </div>
-              <div class="review-box">
-                <div class="review">Online Certification Programs (4 weeks program) - "The online certification program was well-structured and easy to follow. The instructors were knowledgeable and supportive throughout the entire program." - John</div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
+              <div class="review reviewdrum2">
+                <b><i>Priya</i></b>
+                <p>"Know our Vedas and their teachings! I now enjoy maths because of our Rigved knowledge. After passing through many gurus, finally getting taught by Rakesh Bhatia Sir has been a transformative experience."</p>
               </div>
-                <div class="review-box">
-                  <div class="review">Live Free Workshops - "I attended the live free workshops and they were incredibly informative. I learned so much in just a short amount of time. Highly recommend!" - Sarah</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Online Certification Programs (4 weeks program) - "The online certification program was well-structured and easy to follow. The instructors were knowledgeable and supportive throughout the entire program." - John</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Student Learning - Basic to Advance - "The student learning program offered a comprehensive curriculum that took me from basic to advanced concepts seamlessly. I feel much more confident in my skills now!" - Emily</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Ultra Advanced Vedic Maths Techniques - "The ultra advanced Vedic maths techniques course exceeded my expectations. The techniques taught are mind-blowing and have significantly improved my calculation speed." - David</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Crack Govt Exams with Ease: Vedic Math Mastery Course! - "As someone preparing for government exams, this course was a game-changer. The Vedic math mastery techniques helped me solve complex problems with ease. Highly recommended for exam preparation!" - Priya</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Teacher Training & Certification - "The teacher training and certification program provided me with valuable insights and practical skills that I can apply in the classroom. The instructors were supportive and knowledgeable. I feel more confident as an educator now." - Michael</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Mind Training for Fast Thinking - "The mind training course helped me improve my cognitive abilities and enhance my thinking speed. The exercises were challenging yet rewarding, and I can already see a difference in my mental agility." - Sophia</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
-                <div class="review-box">
-                  <div class="review">Enhance focus using our worksheets with detailed analysis - "The focus enhancement worksheets provided detailed analysis and actionable strategies to improve concentration. I found the exercises engaging and effective in boosting my productivity." - Alex</div>
-                  <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                  </div>
-                </div>
+              <div class="review reviewdrum3">
+                <b><i>Tushar</i></b>
+                <p>"Mind-blowing techniques! This course exceeded my expectations. The techniques taught are revolutionary and have significantly improved my calculation speed."</p>
+              </div>
+              <div class="review reviewdrum4">
+                <b><i>Paras</i></b>
+                <p>"As someone preparing for government exams, this course was a game-changer. The Vedic math mastery techniques helped me solve complex problems with ease. Highly recommended for exam preparation!"</p>
+              </div>
+              <div class="review reviewdrum5">
+                <b><i>Sachin</i></b>
+                <p>"The teacher training and certification program provided me with valuable insights and practical skills that I can apply in the classroom. The instructors were supportive and knowledgeable. I feel more confident as an educator now."</p>
+              </div>
+              <div class="review reviewdrum6">
+                <b><i>Sophia</i></b>
+                <p>"The mind training course helped me improve my cognitive abilities and enhance my thinking speed. The exercises were challenging yet rewarding, and I can already see a difference in my mental agility."</p>
               </div>
             </div>
+          </div>
           
-        
-           -->
-     
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script>
+            $(document).ready(function(){
+              // Initialize slide index
+              var slideIndex = 0;
+              
+              // Slide the reviews like a banner
+              function slideReviews() {
+                // Calculate the width of one review
+                var reviewWidth = $('.review').outerWidth(true);
+                // Calculate the total width of all reviews
+                var totalWidth = reviewWidth * $('.review').length;
+                
+                // Move the review slider left by the width of one review
+                $('#top-review-slider').css('transform', 'translateX(-' + (slideIndex * reviewWidth) + 'px)');
+                
+                // Increment slide index
+                slideIndex++;
+                
+                // Reset slide index if it exceeds the total number of reviews
+                if (slideIndex * reviewWidth >= totalWidth) {
+                  slideIndex = 0;
+                }
+              }
+              
+              // Set interval for sliding reviews every 3 seconds
+              setInterval(slideReviews, 5000);
+            });
+          </script>
+           <br><br><br><br>
     <!-- quiz -->
-    <section>
+    <section id="quiz">
     <div class="quizbody">
       <h2> Refresh this page to attend the quiz</h2>
+      <br><br>
       <h2 class="h2 section-title">
         Let us help you to select the <span class="span"> perfect course  </span> for you
     </h2>
@@ -1862,94 +1949,106 @@ displayQuestion();
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!-- Link to your custom stylesheet -->
           <style>
-              .social-media-body {
-                  font-family: Arial, sans-serif;
-                  background-color: #f0f0f0;
-                  color: #333;
-                  margin: 0;
-                  padding: 0;
-              }
-      
-              .social-media-container {
-                  display: flex;
-                  justify-content: space-around;
-                  align-items: flex-start;
-                  padding: 20px;
-                  max-width: 1200px;
-                  margin: 0 auto;
-              }
-
-
-      
-              .twitter-container,
-              .facebook-container {
-                  background-color: #fff;
-                  border-radius: 10px;
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                  overflow: hidden;
-              }
-      
-              .twitter-container {
-                  flex: 1;
-                  margin-right: 20px;
-                  max-height: 800px; /* Set a maximum height */
-    overflow-y: auto; /* Allow vertical scrolling */
-              }
-      
-              .facebook-container {
-                  flex: 1;
-                  margin-left: 20px;
-              }
-      
-              .twitter-heading,
-              .twitter-content a,
-              .twitter-content iframe {
-                  color: #000;
-              }
-      
-              .twitter-heading {
-                  background-color: #000000;
-                  color: #fff;
-              }
-      
-              .facebook-heading,
-              .facebook-content iframe {
-                  background-color: #1877f2;
-                  color: white;
-              }
-      
-              .social-heading {
-                  font-size: 24px;
-                  font-weight: bold;
-                  padding: 15px;
-                  margin: 0;
-              }
-      
-              .twitter-content,
-              .facebook-content {
-                  padding: 20px;
-              }
-      
-              .follow-button,
-              .share-button {
-                  display: inline-block;
-                  background-color: #1da1f2;
-                  color: #fff;
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 5px;
-                  cursor: pointer;
-                  text-decoration: none;
-                  margin-right: 10px;
-                  transition: background-color 0.3s;
-              }
-      
-              .follow-button:hover,
-              .share-button:hover {
-                  background-color: #0d8bf0;
-              }
-          </style>
-      
+            /* CSS styles */
+            .social-media-body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+        
+            .social-media-container {
+                display: flex;
+                flex-direction: column; /* Adjusted flex direction for smaller screens */
+                justify-content: center; /* Center-align content */
+                align-items: center; /* Center-align content */
+                padding: 10px; /* Reduced padding for smaller screens */
+                max-width: 100%; /* Adjusted max-width for smaller screens */
+                margin: 0 auto;
+            }
+        
+            .twitter-container,
+            .facebook-container {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 100%; /* Adjusted width for smaller screens */
+                margin-bottom: 20px; /* Added margin for better spacing */
+            }
+            @media (max-width: 768px) {
+        .facebook-content {
+            width: 75%;
+        }
+        
+            .twitter-container {
+                max-height: 400px; /* Adjusted maximum height for smaller screens */
+                overflow-y: auto; /* Allow vertical scrolling */
+            }
+        
+            .twitter-heading,
+            .twitter-content a,
+            .twitter-content iframe {
+                color: #000;
+            }
+        
+            .twitter-heading {
+                background-color: #000000;
+                color: #fff;
+            }
+        
+            .facebook-heading,
+            .facebook-content iframe {
+                background-color: #1877f2;
+                color: white;
+            }
+        
+            .social-heading {
+                font-size: 20px; /* Reduced font size for smaller screens */
+                font-weight: bold;
+                padding: 10px; /* Reduced padding for smaller screens */
+                margin: 0;
+            }
+        
+            .twitter-content,
+            .facebook-content {
+                padding: 10px; /* Reduced padding for smaller screens */
+            }
+        
+            .follow-button,
+            .share-button {
+                display: inline-block;
+                background-color: #1da1f2;
+                color: #fff;
+                padding: 8px 16px; /* Adjusted padding for smaller screens */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin: 5px; /* Adjusted margin for better spacing */
+                transition: background-color 0.3s;
+            }
+        
+            .follow-button:hover,
+            .share-button:hover {
+                background-color: #0d8bf0;
+            }
+        
+            /* Media Query for smaller screens */
+            @media (max-width: 768px) {
+                .social-heading {
+                    font-size: 18px; /* Further reduced font size for smaller screens */
+                }
+        
+                .follow-button,
+                .share-button {
+                    padding: 6px 12px; /* Further adjusted padding for smaller screens */
+                    margin: 3px; /* Further adjusted margin for better spacing */
+                }
+            }
+        </style>
+        
           <div class="social-media-container">
               <!-- Twitter Content -->
               
@@ -2674,9 +2773,7 @@ displayQuestion();
           <div class="container">
 
             <style>
-              body {
-                text-align: center;
-              }
+             
           
               .centered-text {
                 display: inline-block;
@@ -2726,7 +2823,7 @@ displayQuestion();
           <img src="./assets/images/whatsapp_icon.png" width="50" height="50">
         </a>
       </div>
-      
+    
 
   </body>
 </html>

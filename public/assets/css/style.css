@@ -396,6 +396,41 @@ body {
   pointer-events: all;
 }
 
+/* Media Query for mobile screens */
+@media (max-width: 768px) {
+  .header {
+    position: fixed; /* Change position to fixed for mobile screens */
+  }
+
+  .header.active { 
+    position: fixed; /* Keep position fixed for mobile screens */
+    width: 100%; /* Ensure header stretches across the screen */
+    box-shadow: var(--shadow-1); /* Keep the shadow */
+  }
+
+  .header .container,
+  .header-actions,
+  .navbar .wrapper {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to fill the width */
+    gap: 10px; /* Reduce the gap between items */
+  }
+
+  .navbar {
+    left: 0; /* Change left position to 0 for mobile screens */
+    width: 100%; /* Make navbar full-width */
+    max-width: 100%; /* Ensure navbar stretches across the screen */
+    height: auto; /* Allow navbar height to adjust based on content */
+  }
+
+  .navbar.active {
+    transform: translateY(100%); /* Slide navbar from the bottom */
+  }
+
+  .navbar .wrapper {
+    padding: 10px 15px; /* Adjust padding */
+  }
+}
 
 
 

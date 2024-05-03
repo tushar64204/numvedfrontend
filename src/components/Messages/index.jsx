@@ -17,7 +17,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://numericveda.onrender.com/api/contacts";
+      const url = "https://numericvedaserver.onrender.com/api/contacts";
       const response = await axios.post(url, formData); // corrected FormData to formData
       console.log(response.data);
       // Optionally, you can show a success message or redirect the user after successful submission
