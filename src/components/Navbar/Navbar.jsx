@@ -34,7 +34,7 @@ function Navbar() {
         </a>
         <ul className={active}>
           <li className="nav__item">
-            <a href="/login" target="_blank" className="nav__link" onClick={() => handleNavigation("/")}>
+            <a href="/src/components/Login" target="_blank" className="nav__link" onClick={() => handleNavigation("/")}>
               Home
             </a>
           </li>
@@ -50,13 +50,13 @@ function Navbar() {
           </li>
           
           <li className="nav__item">
-            <a href="/contact" target="_blank" className="nav__link" onClick={() => handleNavigation("/contact")}>
+            <a href="/src/components/contact" target="_blank" className="nav__link" onClick={() => handleNavigation("/contact")}>
               Contact
             </a>
           </li>
           <li className="nav__item">
             <a
-              href="/Login"
+              href="/Login" target="_blank"
               className="nav__link"
               onClick={() => handleNavigation("/login")}
             >
