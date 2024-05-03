@@ -1,6 +1,7 @@
 /* styles.module.css */
 
 .thank_you_container {
+  margin-top: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;

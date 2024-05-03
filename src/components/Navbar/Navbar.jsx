@@ -37,7 +37,7 @@ function Navbar() {
         </a>
         <ul className={active}>
           <li className="nav__item">
-            <a href="/" target="_blank" className="nav__link" onClick={() => handleNavigation("/")}>
+            <a href="/" className="nav__link" onClick={() => handleNavigation("/")}>
               Home
             </a>
           </li>
@@ -53,25 +53,18 @@ function Navbar() {
           </li>
           
           <li className="nav__item">
-          <Link to="/contact">
+          <Link to="/contact" target="_blank" >
               Contact
               </Link>
           </li>
           <li className="nav__item">
-            <a
-              href="/Login" target="_blank"
-              className="nav__link"
-              onClick={() => handleNavigation("/login")}
-            >
-              Login/Signup
-            </a>
+          <Link to="/Login">
+          Login/Signup
+              </Link>
+              
+           
           </li>
         </ul>
-        <div onClick={navToggle} className={icon}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
       </nav>
     </div>
   );
