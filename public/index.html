@@ -203,65 +203,85 @@
     -->
     <hr>
   
-    <div class="container">
+    <style>
+      /* Define button-like styling */
+      .quiz-buttontime {
+          display: inline-block;
+          padding: 0px 50px;
+          background-color: #0b27c4; /* Pink background color */
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+      }
+      
+      /* Media Query for mobile screens */
+      @media (max-width: 768px) {
+          .quiz-buttontime {
+              display: block;
+              margin: 0 auto;
+          }
+          .navbar {
+              display: none; /* Hide navbar by default on mobile */
+              position: absolute;
+              top: 50px; /* Adjust the top position */
+              left: 0;
+              width: 100%;
+              background-color: rgba(255, 255, 255, 0.8);
+              z-index: 10000;
+          }
+          .navbar.active {
+              display: block; /* Show navbar when active */
+          }
+      }
+      @media (min-width: 769px) {
+          #navbar-toggle {
+              display: none;
+          }
+      }
+  </style>
 
+  <div class="container">
+      <button id="navbar-toggle" class="quiz-buttontime" >Menu
+      </button>
+      <br>
+      <a href="#quiz" class="quiz-buttontime">Play quiz <div id="timer"><span id="time">30</span></div></a>
       <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+              
+              <li class="dropdown"><a href="./aboutus.html" class="dropbtn">About</a></li>
+              <li class="dropdown"><a href="./message.html" class="dropbtn">messageUs</a></li>
+              <li class="dropdown"><a href="./gallery.html" class="dropbtn">Gallery</a></li>
+              <li class="dropdown">
+                  <a class="dropbtn">Courses</a>
+                  <div class="dropdown-content" style="z-index: 30;">
+                      <a href="./schedule.html">Live Learning Courses</a>
+                      <a href="./course.html">Certification Courses</a>
+                  </div>
+              </li>
+              <li class="dropdown"><a href="./vedicmaths.html" class="dropbtn">Textbooks</a></li>
+              <li class="dropdown"><a href="./Journals.html" class="dropbtn">Journal</a></li>
+              <!-- Add other menu items here -->
+          </ul>
+      </nav>
+  </div>
   
-        
-        </div>
+  <script>
+      var navbarToggle = document.getElementById("navbar-toggle");
+      var navbar = document.querySelector(".navbar");
   
-        <ul class="navbar-list">
-          <style>
-            /* Define button-like styling */
-            .quiz-buttontime {
-              display: inline-block;
-              padding: 10px 20px;
-              background-color: #0b27c4; /* Pink background color */
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            /* Media Query for mobile screens */
-@media (max-width: 768px) {
-  .quiz-buttontime {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-          </style>
-          <a href="#quiz" target="_blank" class="quiz-buttontime">Play quiz <div id="timer"><span id="time">30</span></div>
-            </a>
-
-
-      
-          <li class="dropdown"><a href="./aboutus.html" target="_blank" class="dropbtn">About</a></li>
-      
-          <li class="dropdown"><a href="./message.html" target="_blank" class="dropbtn">messageUs</a></li>
-      
-          <li class="dropdown"><a href="./gallery.html" target="_blank" class="dropbtn">Gallery</a></li>
-      
-          <li class="dropdown">
-              <a class="dropbtn">Courses</a>
-              <div class="dropdown-content" style="z-index: 30;">
-                  
-                  
-                  <a href="./schedule.html" target="_blank">Live Learning Courses</a>
-                  <a href="./course.html" target="_blank">Certification Courses</a>
-              </div>
-          </li>
-      
-          <li class="dropdown"><a href="./vedicmaths.html" target="_blank" class="dropbtn">Textbooks</a>
-      
-          <li class="dropdown"><a href="./Journals.html" target="_blank" class="dropbtn">Journal</a></li>
-      
-          <!-- Add other menu items here -->
-      
-      </ul>
-      
-      
-      </nav>      
-
+      navbarToggle.addEventListener("click", function() {
+          navbar.classList.toggle("active");
+      });
+  
+      window.addEventListener("click", function(event) {
+          if (window.innerWidth <= 768) { // Check if screen size is mobile
+              if (!navbar.contains(event.target) && event.target !== navbarToggle) {
+                  navbar.classList.remove("active");
+              }
+          }
+      });
+  </script>
+  
       <style>
 
       /* Default styles for both mobile and desktop */
@@ -518,15 +538,24 @@
         transform: translateY(-20px); /* Adjust floating distance */
       }
     }
+    .floaticon {
+      width: 60%; /* Adjust image size */
+      height: 100px;
+    }
+    @media only screen and (max-width: 767px) {
+      .floaticon {
+        width: 100%;
+      }
+    }
   </style>
 
 <div class="Floatingcontainer">
   <div id="date-time"></div>
   <div class="floatingAnimation">
     <!-- Floating animation element -->
-    <img src="./readme-images/demopng.png" width="60%" alt="Floating Animation">
+    <img src="./readme-images/demopng.png" class="floaticon" alt="Floating Animation">
   </div>
-  <div id="course-info">Course bookings are open! Login to Book your Free Class.</div>
+  <div id="course-info"><a href="#Our_Vedic_Mathematics_Courses">  Course bookings are open! Login to Book your Free Class.</a></div>
 </div>
 
 <script>
@@ -796,7 +825,7 @@
     }
 
     .university-logo {
-        width: 45%; /* Set the width of the logo images */
+        width: 35%; /* Set the width of the logo images */
         margin: 10px; /* Add margin around the images */
     }
     .unique-image-container {
@@ -1167,7 +1196,7 @@
                    <button class="unique-our-courses-button">Our Courses</button>
                   <div class="unique-curtain">
                     <div class="unique-our-courses-text">
-                       <h2 class="h2 section-title">
+                       <h2 class="h2 section-title" id="Our_Vedic_Mathematics_Courses">
                         Our Vedic Mathematics Courses <span class="span">click here  </span>
                     </h2>
                   </div>
