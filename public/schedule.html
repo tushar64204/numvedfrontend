@@ -7,104 +7,99 @@
 
     <title>Our Live Learning Programs</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 10px;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 10px;
+          padding: 0;
+          background-color: #f4f4f4;
+          color: #333;
+      }
 
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-        }
+      header {
+          background-color: #3498db;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          font-size: 24px;
+      }
 
-        section {
-            margin: 20px;
-            text-align: left;
-            
-        }
+      section {
+          margin: 20px;
+          text-align: left;
+      }
 
-        .program-container {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      .program-container {
+          background-color: #fff;
+          padding: 20px;
+          margin: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .pdf-link {
-            display: block;
-            margin-bottom: 10px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+      .pdf-link {
+          display: block;
+          margin-bottom: 10px;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+      }
 
-        .pdf-link:hover {
-            text-decoration: underline;
-        }
+      .pdf-link:hover {
+          text-decoration: underline;
+      }
 
-        .animate {
-            animation: fadeIn 1.5s ease-out;
-        }
+      .animate {
+          animation: fadeIn 1.5s ease-out;
+      }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        /* Style for the dropdown container */
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
 
-        .containerchoose {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-        }
+      /* Style for the dropdown container */
+      .containerchoose {
+          text-align: center;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-    
+      .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 8px;
+      }
 
-        .class-info {
-            margin-bottom: 20px;
-        }
+      .class-info {
+          margin-bottom: 20px;
+      }
 
-        .class-info p {
-            margin: 0;
-        }
+      .class-info p {
+          margin: 0;
+      }
 
-        .class-info h2 {
-            margin-top: 0;
-        }
+      .class-info h2 {
+          margin-top: 0;
+      }
 
-        .book-button {
-            float: right;
-            margin: 0;
-        }
-
-       
-  
+      .book-button {
+          float: right;
+          margin: 0;
+      }
 
       /* Container for payment section */
       .c1 {
@@ -117,16 +112,16 @@
       }
 
       @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+          from {
+              opacity: 0;
+              transform: translateY(-50px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
       }
-      
+
       /* Heading styles */
       .c2 {
           font-size: 24px;
@@ -134,7 +129,7 @@
           margin-bottom: 20px;
           text-align: center;
       }
-      
+
       /* Paragraph styles */
       .c3 {
           font-size: 16px;
@@ -142,13 +137,13 @@
           margin-bottom: 10px;
           text-align: center;
       }
-      
+
       /* QR code container */
       .c4 {
           text-align: center;
           margin-bottom: 20px;
       }
-      
+
       /* Payment link styles */
       .c5 {
           display: block;
@@ -162,22 +157,28 @@
           text-decoration: none;
           transition: background-color 0.3s;
       }
-      
+
       .c5:hover {
           background-color: #0056b3;
       }
-      .c6 {
-            display: none;
-        }
-          /* Media query for smaller screens */
-  @media screen and (max-width: 600px) {
-    .c1 {
-      max-width: 300px;
-    }
-  }
-      
 
-    </style>
+      .c6 {
+          display: none;
+      }
+
+      /* Media query for smaller screens */
+      @media screen and (max-width: 600px) {
+          .program-container {
+              margin: 10px;
+          }
+ 
+
+          .c1 {
+              max-width: 90%;
+              margin: 0 auto;
+          }
+      }
+  </style>
 
 </head>
 <body>
@@ -354,7 +355,7 @@
       }
   }
 </script>
-<br><br><br><br><br><br>
+<br><br>
 <!-- Live Free Workshops on Vedic Mathematics -->
 <section id="live-free-workshops" class="program-container animate">
   <header>
@@ -373,7 +374,7 @@
   
   <!-- About Instructor -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h3>About Dr. Rakesh Bhatia</h3>
       <p>Dr. Rakesh Bhatia is a renowned expert in Vedic Mathematics with over 20 years of experience. He holds a Ph.D. in Vedic Maths and has dedicated his career to teaching and promoting this ancient mathematical system.</p>
@@ -404,7 +405,19 @@
     h1, h2, h3 {
         margin-top: 20px;
     }
-   
+    /* Media query for smaller screens */
+    @media screen and (max-width: 600px) {
+            header {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            h1, h2, h3 {
+                margin-top: 10px;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
     .rating {
         font-size: 24px;
         color: #ffc107;
@@ -435,6 +448,15 @@
     .teacher {
   image-rendering: pixelated; /* This property renders the image in a pixelated manner */
 }
+@media screen and (max-width: 600px) {
+  .review-container{
+    display: block;
+  }
+
+}
+  .review {
+    margin-right: 0;
+  }
 </style>
 <header>
 <h1>Online Certification Programs</h1>
@@ -470,6 +492,8 @@
       
       <button onclick="window.open('./Online_Certification_Programs.html', '_blank')">Visit Course Page</button>
     </div>
+
+    
 <!-- Student Learning - Basic to Advance -->
 <section id="student-learning" class="program-container animate">
   <header>
@@ -479,7 +503,7 @@
   <!-- Add links and additional information here -->
   <h3>Live Courses - Class-wise</h3>
   <p>Explore our live courses tailored to specific class levels:</p>
-  <section>
+  
   <div class="dropdown">
     <li class="dropdown">
       <a class="btn">Live Courses - Class-wise</a>
@@ -514,24 +538,11 @@
   
   <p>Don't miss this opportunity to enhance your mathematical skills with Vedic.</p>
   </section>
-  <!-- paymentupi -->
-  
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
-</section>
+
+
+
+
 
 <!-- Ultra Advanced Vedic Maths Techniques -->
 <section id="ultra-advanced-vedic-maths" class="program-container animate">
@@ -609,7 +620,7 @@
   </ol>
   
   <!-- paymentupi -->
-  
+<!--   
 
 <button class="c5" onclick="toggleContent()">Make Payment: Rs. 5499 (limited-time offer)</button>
 <div class="c6">
@@ -652,7 +663,7 @@ function toggleContent() {
           width: 200,
           height: 200,
       });
-  </script>
+  </script> -->
   <!-- Booking Button -->
   <h3>Book Your Spot</h3>
   <p>Unlock the secrets of ultra advanced Vedic Mathematics and elevate your mathematical skills to new heights. Reserve your spot now!</p>
@@ -735,23 +746,6 @@ function toggleContent() {
     <li>Day 10: Application of Vedic Maths in data interpretation</li>
   </ol>
   
-  <!-- paymentupi -->
-  
-
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 4499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹4499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=4499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
   <!-- Booking Button -->
   <h3>Enroll Now</h3>
   <p>Equip yourself with the essential Vedic Math techniques needed to crack govt exams with ease. Enroll now and pave your way to success!</p>
@@ -835,24 +829,7 @@ function toggleContent() {
     <li>Day 31-35: Integrating technology in the curriculum</li>
     <li>Day 36-40: Differentiated instruction techniques</li>
   </ol>
-  
-  <!-- paymentupi -->
-  
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 9499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹9499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=9499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
 
   <!-- Booking Button -->
   <h3>Register Now</h3>
@@ -942,23 +919,6 @@ function toggleContent() {
     <li>Day 16-20: Problem-solving strategies for quick decision-making</li>
   </ol>
   
-  <!-- paymentupi -->
-  
-
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2999 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2999:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2999&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
 
   <!-- Booking Button -->
   <h3>Join Now</h3>
@@ -1046,23 +1006,7 @@ function toggleContent() {
     <li>Day 21-25: Engaging in focused activities and tasks</li>
     <li>Day 26-30: Analyzing progress through practice worksheets</li>
   </ol>
-  <!-- paymentupi -->
   
-
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 1999 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹1999:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=1999&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
   <!-- Registration Button -->
   <h3>Join Now</h3>
   <p>Take control of your focus and productivity. Join the program today and unlock your full potential!</p>
@@ -1148,7 +1092,7 @@ function toggleContent() {
   </ul>
 </div>
 <div class="instructor">
-  <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+  <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
   <div class="content">
     <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
     <h2>Educational Experience</h2>
@@ -1175,20 +1119,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 <!-- Booking Button -->
 <h2>Book Your Free Demo Class</h2>
 <p>Don't miss this opportunity to experience the power of Vedic Mathematics. Reserve your spot now!</p>
@@ -1231,7 +1162,7 @@ function toggleContent() {
   
     <!-- Instructor Information -->
     <div class="instructor">
-      <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+      <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
       <div class="content">
         <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
         <h2>Educational Experience</h2>
@@ -1258,20 +1189,7 @@ function toggleContent() {
   <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
     <!-- Booking Button -->
     <h2>Book Your Free Demo Class</h2>
@@ -1316,7 +1234,7 @@ function toggleContent() {
 
   <!-- Instructor Information -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
       <h2>Educational Experience</h2>
@@ -1343,20 +1261,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
   <!-- Booking Button -->
   <h2>Book Your Free Demo Class</h2>
@@ -1424,7 +1329,7 @@ function toggleContent() {
 
   <!-- Instructor Information -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
       <h2>Educational Experience</h2>
@@ -1451,20 +1356,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
   <!-- Booking Button -->
   <h2>Book Your Free Demo Class</h2>
@@ -1534,7 +1426,7 @@ function toggleContent() {
 
   <!-- Instructor Information -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
       <h2>Educational Experience</h2>
@@ -1561,20 +1453,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
   <!-- Booking Button -->
   <h2>Book Your Free Demo Class</h2>
@@ -1644,7 +1523,7 @@ function toggleContent() {
 
   <!-- Instructor Information -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
       <h2>Educational Experience</h2>
@@ -1671,20 +1550,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
   <!-- Booking Button -->
   <h2>Book Your Free Demo Class</h2>
@@ -1753,7 +1619,7 @@ function toggleContent() {
 
   <!-- Instructor Information -->
   <div class="instructor">
-    <img src="./assets/images/sir.png" width="20%" class="teacher" alt="Dr. Rakesh Bhatia">
+    <img src="./assets/images/sir.png" class="teacher" alt="Dr. Rakesh Bhatia">
     <div class="content">
       <h2><a href="./sir.html" style="color: blue;">Introduction to Dr. Rakesh Bhatia</a></h2>
       <h2>Educational Experience</h2>
@@ -1780,20 +1646,7 @@ function toggleContent() {
 <!-- paymentupi -->
   
 
-<button class="c5" onclick="toggleContent()">Make Payment: Rs. 2499 (limited-time offer)</button>
-<div class="c6">
-  <div class="c1">
-      <h1 class="c2">Send Money via UPI</h1>
-      <p class="c3">Scan the QR code below or click the button to make a payment of ₹2499:</p>
-      <div class="c4" id="qrcode"></div>
-      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=2499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
-  
-  <p class="c3">📲 After Payment:</p>
-  <p class="c3">💳 <strong>
-  Please share a screenshot of your payment confirmation on WhatsApp.<br> Our team will contact you within 1 hour of payment receipt. Rest assured, your funds are secure with us.
-</strong></p>
-</div>
-</div>
+
 
   <!-- Booking Button -->
   <h2>Book Your Free Demo Class</h2>

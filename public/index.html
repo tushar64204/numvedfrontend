@@ -224,7 +224,7 @@
               display: none; /* Hide navbar by default on mobile */
               position: absolute;
               top: 50px; /* Adjust the top position */
-              left: 0;
+              right: 0;
               width: 100%;
               background-color: rgba(255, 255, 255, 0.8);
               z-index: 10000;
@@ -232,6 +232,7 @@
           .navbar.active {
               display: block; /* Show navbar when active */
           }
+          
       }
       @media (min-width: 769px) {
           #navbar-toggle {
@@ -540,7 +541,7 @@
     }
     .floaticon {
       width: 60%; /* Adjust image size */
-      height: 100px;
+      height: auto;
     }
     @media only screen and (max-width: 767px) {
       .floaticon {
@@ -1212,44 +1213,44 @@
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#online-certification-programs"><h3>Online Certification Programs (4 weeks program)</h3></a>
+                        <a href="./Online_Certification_Programs.html"><h3>Online Certification Programs (4 weeks program)</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 1499 </span> for you
                       </h2></p>
                     </div>
 
                     <div class="unique-course-box">
-                        <a href="./schedule.html#student-learning"><h3>Student Learning - Basic to Advance</h3></a>
+                        <a href="./student.html"><h3>Student Learning - Basic to Advance</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 2499  </span> for you
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#ultra-advanced-vedic-maths"><h3>Ultra Advanced Vedic Maths Techniques</h3></a>
+                        <a href="./ultra-advanced-vedic-maths.html"><h3>Ultra Advanced Vedic Maths Techniques</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 5499  </span> for you
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#crack-govt-exams"><h3>Crack Govt Exams with Ease: Vedic Math Mastery Course!</h3></a>
+                        <a href="./crack-govt-exams.html"><h3>Crack Govt Exams with Ease: Vedic Math Mastery Course!</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 4499  </span> for you
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#teacher-training"><h3>Teacher Training & Certification</h3></a>
+                        <a href="./teacher.html"><h3>Teacher Training & Certification</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 9499 </span> for you
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#mind-training"><h3>Mind Training for Fast Thinking</h3></a>
+                        <a href="./mind.html"><h3>Mind Training for Fast Thinking</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 2999  </span> for you
                       </h2></p>
                     </div>
                     <div class="unique-course-box">
-                        <a href="./schedule.html#enhance-focus"><h3>Enhance focus using our worksheets with detailed analysis.</h3></a>
+                        <a href="./enhance.html"><h3>Enhance focus using our worksheets with detailed analysis.</h3></a>
                         <p> <h2 class="h2 section-title">
                           Price: <span class="span"> Rs. 1999  </span> for you 
                       </h2></p>
@@ -1989,6 +1990,7 @@ displayQuestion();
         
             .social-media-container {
                 display: flex;
+                background-color: #9400d365;
                 flex-direction: column; /* Adjusted flex direction for smaller screens */
                 justify-content: center; /* Center-align content */
                 align-items: center; /* Center-align content */
@@ -1999,6 +2001,7 @@ displayQuestion();
         
             .twitter-container,
             .facebook-container {
+              position: inline;
                 background-color: #fff;
                 border-radius: 10px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -2020,7 +2023,7 @@ displayQuestion();
             .twitter-content a,
             .twitter-content iframe {
                 color: #000;
-            }
+            }}
         
             .twitter-heading {
                 background-color: #000000;
@@ -2104,9 +2107,10 @@ displayQuestion();
                         <a class="share-button" href="#">Share on Facebook</a>
                     </div>
                 </div>
-                
               </div>
           </div>
+          <h3>Dr. Rakesh Bhatia</h3>
+
       </div>
 <br><br><br><br>
       <!-- photo gallery -->
@@ -2548,37 +2552,49 @@ displayQuestion();
     
             </div>
           </section>
-    
-        </article>
-      </main>
-    
-    
-           
-          
-          <title>Contact Form</title>
-      </head>
+
+
+          <!-- contact form  -->
+     <style>
+  .form-container1 {
+    background-color: #bec3c9;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-container {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .formform {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10%;
+  }
+</style>
+
+<div class="form-container1">
+  <div class="form-container">
+    <form action="https://formspree.io/f/mrgnkqnv" method="POST">
+      <h2>Have a question or need assistance!</h2>
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" required>
       
-      <div>
-        <div class="form-container">
-          <div>
-            <img src="./assets/images/blog-1.jpg" class="formform" >
-            
-        </div>
-          <form action="https://formspree.io/f/mrgnkqnv" method="POST">
-              <h2>Have a question or need assistance!</h2>
-              <label for="email">Your Email:</label>
-              <input type="email" name="email" required>
-    
-              <label for="message">Your Message:</label>
-              <textarea name="message" rows="4" required></textarea>
-    
-              <button type="submit">Send</button>
-          </form>
-    
-          
-      </div>
-    </div>
-   
+      <label for="message">Your Message:</label>
+      <textarea name="message" rows="4" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <h3 style="text-align: center;">We will reply to you within 24hrs</h3>
+  </div>
+
+  <div>
+    <img src="./assets/images/blog-1.jpg" class="formform" alt="Image">
+  </div>
+</div>
+  </div>
       <!-- side bar social media -->
       
      <style>
