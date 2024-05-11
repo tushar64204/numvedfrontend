@@ -92,14 +92,13 @@
     <header>
       <h2>Payment Option</h2>
     </header>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
     <button class="c5" onclick="toggleContent()">Make Payment: Rs. 1999 (limited-time offer)</button>
   <div class="c6">
     <div class="c1">
         <h1 class="c2">Send Money via UPI</h1>
         <p class="c3">Scan the QR code below or click the button to make a payment of ₹1999:</p>
-        <div class="c4" id="qrcode"></div>
+        <div class="c4"><img src="./readme-images/1999rkpay.png" alt="Description of the image"></div>
         <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=1999&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
     </div>
     <p class="c3">📲 After Payment:</p>
@@ -146,7 +145,6 @@ function toggleContent() {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="qrcode.min.js"></script>
   <script>
     // Initialize slick slider
     $('.review-slider').slick({

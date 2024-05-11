@@ -92,15 +92,14 @@
     <header>
       <h2>Payment Option</h2>
     </header>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
-    <button class="c5" onclick="toggleContent()">Make Payment: Rs. 9499 (limited-time offer)</button>
+    <button class="c5" onclick="toggleContent()">Make Payment: Rs. 199 (limited-time offer)</button>
   <div class="c6">
     <div class="c1">
         <h1 class="c2">Send Money via UPI</h1>
-        <p class="c3">Scan the QR code below or click the button to make a payment of ₹4499:</p>
-        <div class="c4" id="qrcode"></div>
-        <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=4499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
+        <p class="c3">Scan the QR code below or click the button to make a payment of ₹199:</p>
+        <div class="c4"><img src="./readme-images/2499rkpay.png" alt="Description of the image"></div>
+        <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=199&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
     </div>
     <p class="c3">📲 After Payment:</p>
     <p class="c3">💳 <strong>
@@ -110,7 +109,7 @@
     <script>
       // Create a QR code with the UPI payment details
       const upiId = '9466235578@ybl';
-      const amount = '4499';
+      const amount = '199';
       const transactionNote = 'Payment for Product';
       const qrData = `upi://pay?pa=${upiId}&pn=YourMerchantName&am=${amount}&tn=${transactionNote}`;
 

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books for Sale</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/course.css">
 
 </head>
 <style>body {
@@ -130,12 +129,24 @@ button:hover {
                 <h2>Book Title 1</h2>
                 <p>Author: Author Name</p>
                 <button onclick="buyNow()">Buy Now</button>
+                <div class="c1">
+                    <h1 class="c2">Send Money via UPI</h1>
+                    <p class="c3">Scan the QR code below or click the button to make a payment of ₹1499:</p>
+                    <div class="c4"><img src="./readme-images/1499rkpay.png" alt="Description of the image"></div>
+                    <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=1499&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
+                </div>
             </div>
             <div class="book">
                 <img src="book2.jpg" alt="Book Cover">
                 <h2>Book Title 2</h2>
                 <p>Author: Author Name</p>
                 <button onclick="buyNow()">Buy Now</button>
+                <div class="c1">
+                    <h1 class="c2">Send Money via UPI</h1>
+                    <p class="c3">Scan the QR code below or click the button to make a payment of ₹199:</p>
+                    <div class="c4"><img src="./readme-images/199rkpay.png" alt="Description of the image"></div>
+                    <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=199&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
+                </div>
             </div>
             <div class="book">
                 <img src="book3.jpg" alt="Book Cover">
@@ -145,9 +156,9 @@ button:hover {
                 <div class="c6">
                   <div class="c1">
                       <h1 class="c2">Send Money via UPI</h1>
-                      <p class="c3">Scan the QR code below or click the button to make a payment of ₹199:</p>
-                      <div class="c4" id="qrcode"></div>
-                      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=199&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
+                      <p class="c3">Scan the QR code below or click the button to make a payment of ₹1999:</p>
+                      <div class="c4"><img src="./readme-images/1999rkpay.png" alt="Description of the image"></div>
+                      <a href="upi://pay?pa=9466235578@ybl&pn=YourMerchantName&am=1999&tn=Payment for Product" class="c5">Click here to pay via UPI</a>
                   </div>
                   <p class="c3">📲 After Payment:</p>
                   <p class="c3">💳 <strong>
@@ -155,12 +166,7 @@ button:hover {
                 </strong></p>
                 </div>
                   <script>
-                    // Create a QR code with the UPI payment details
-                    const upiId = '9466235578@ybl';
-                    const amount = '199';
-                    const transactionNote = 'Payment for Product';
-                    const qrData = `upi://pay?pa=${upiId}&pn=YourMerchantName&am=${amount}&tn=${transactionNote}`;
-              
+                   
                      // Function to reveal the hidden content
                      function revealContent() {
                         const hiddenContent = document.querySelector('.c6');
@@ -176,11 +182,8 @@ button:hover {
                         }
                     }
                     // Generate the QR code
-                    const qrcode = new QRCode(document.getElementById('qrcode'), {
-                        text: qrData,
-                        width: 200,
-                        height: 200,
-                    });
+                   
+                
                 </script>
               
             </div>
