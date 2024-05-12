@@ -7,7 +7,7 @@ body, h1, h2, h3, p, ul, ol, li, form, fieldset, input, textarea, button {
 /* Applying some basic styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #a59f9f;
 }
 
 .container {
@@ -60,3 +60,126 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+/* styles.css */
+
+/* Global Styles */
+
+  
+  /* Container Styles */
+  .announcement_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Title Styles */
+  .announcement_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Details Styles */
+  .announcement_details {
+    margin-bottom: 20px;
+  }
+  
+  .announcement_details p {
+    margin: 5px 0;
+  }
+  
+  /* Questions Styles */
+  .announcement_questions {
+    margin-bottom: 20px;
+  }
+  
+  .announcement_questions p {
+    margin: 5px 0;
+  }
+  
+  /* Button Styles */
+  .book_now_button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Contact Info Styles */
+  .contact_info {
+    margin-bottom: 20px;
+  }
+  
+  /* Signup Container Styles */
+  .signup_container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Signup Form Container Styles */
+  .signup_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup_form_container .left {
+    margin-bottom: 20px;
+  }
+  
+  .signup_form_container .right {
+    width: 100%;
+  }
+  
+  /* Form Container Styles */
+  .form_container {
+    width: 100%;
+  }
+  
+  /* Input Styles */
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Select Styles */
+  select.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  /* Button Styles */
+  .green_btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Coolsee Styles */
+  .coolsee {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .coolsee p {
+    margin: 5px 0;
+  }
+  
